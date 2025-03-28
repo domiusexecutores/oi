@@ -308,7 +308,7 @@ v5:Destroy();
 --         pcall(v422);
 --     end
 -- end);
-local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/obfalchx/testfluent/refs/heads/main/FluentTrau"))();
+local v14 = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))();
 local v15 = v14:CreateWindow({
     Title = "Min Gaming",
     SubTitle = "",
@@ -2674,8 +2674,10 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
     game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy();
 end
 v16.Home:AddButton({
+    Title = "Discord",
     Description = "Giao Lưu",
     Callback = function()
+        setclipboard("https://discord.gg/J37PW97j6a");
     end
 });
 _G.FastAttackStrix_Mode = "Super Fast Attack";
@@ -6591,6 +6593,7 @@ v16.Status:AddButton({
     Title = "Sao Chép Job ID",
     Description = "",
     Callback = function()
+        setclipboard(tostring(game.JobId));
     end
 });
 local v106 = v16.Status:AddToggle("MyToggle", {
