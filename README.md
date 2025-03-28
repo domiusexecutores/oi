@@ -2674,10 +2674,8 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
     game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy();
 end
 v16.Home:AddButton({
-    Title = "Discord",
     Description = "Giao Lưu",
     Callback = function()
-        setclipboard("https://discord.gg/J37PW97j6a");
     end
 });
 _G.FastAttackStrix_Mode = "Super Fast Attack";
@@ -6593,7 +6591,6 @@ v16.Status:AddButton({
     Title = "Sao Chép Job ID",
     Description = "",
     Callback = function()
-        setclipboard(tostring(game.JobId));
     end
 });
 local v106 = v16.Status:AddToggle("MyToggle", {
