@@ -1,4 +1,4 @@
-shared.LoaderTitle = "discord.gg/domius";
+shared.LoaderTitle = "Đăng Ký Kênh Min Gaming";
 shared.LoaderKeyFrames = {
     [1] = {
         1,
@@ -102,7 +102,7 @@ local v8 = CreateObject("TextLabel", {
     Name = "UserName",
     Parent = v6,
     BackgroundTransparency = 1,
-    Text = "Youtube: domius",
+    Text = "Youtube: Min Gaming",
     Position = UDim2.new(0, 75, 0, 10),
     Size = UDim2.new(0, 200, 0, 50),
     Font = Enum.Font.GothamBold,
@@ -310,7 +310,7 @@ v5:Destroy();
 -- end);
 local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/obfalchx/testfluent/refs/heads/main/FluentTrau"))();
 local v15 = v14:CreateWindow({
-    Title = "domius",
+    Title = "Min Gaming",
     SubTitle = "",
     TabWidth = 160,
     Theme = "Light",
@@ -320,49 +320,49 @@ local v15 = v14:CreateWindow({
 });
 local v16 = {
     Home = v15:AddTab({
-        Title = "home"
+        Title = "Thông Tin"
     }),
     Main = v15:AddTab({
-        Title = "main"
+        Title = "Cày"
     }),
     Sea = v15:AddTab({
-        Title = "sea eventos"
+        Title = "Sự Kiện"
     }),
     ITM = v15:AddTab({
-        Title = "ítens"
+        Title = "Vật Phẩm"
     }),
     Setting = v15:AddTab({
-        Title = "configurações"
+        Title = "Cài Đặt"
     }),
     Status = v15:AddTab({
-        Title = "status"
+        Title = "Máy Chủ"
     }),
     Stats = v15:AddTab({
-        Title = ""
+        Title = "Chỉ Số"
     }),
     Player = v15:AddTab({
-        Title = "player'"
+        Title = "Người Chơi"
     }),
     Teleport = v15:AddTab({
-        Title = "teleport"
+        Title = "Dịch Chuyển"
     }),
     Visual = v15:AddTab({
-        Title = "visual"
+        Title = "Giả"
     }),
     Fruit = v15:AddTab({
-        Title = "fruit"
+        Title = "Trái"
     }),
     Raid = v15:AddTab({
-        Title = "raid"
+        Title = "Tập Kích"
     }),
     Race = v15:AddTab({
-        Title = "race"
+        Title = "Tộc"
     }),
     Shop = v15:AddTab({
-        Title = "loja"
+        Title = "Cửa Hàng"
     }),
     Misc = v15:AddTab({
-        Title = "misc"
+        Title = "Khác"
     })
 };
 local v17 = v14.Options;
@@ -3871,7 +3871,7 @@ if Sea3 then
             _G.AutoFindPrehistoric = false;
             if not v513 then
                 v14:Notify({
-                    Title = "domius",
+                    Title = "Min Gaming",
                     Content = "Đảo Dung Nham Tìm Thấy",
                     Duration = 10
                 });
@@ -3965,7 +3965,7 @@ if Sea3 then
             _G.AutoFindMirage = false;
             if not v513 then
                 v14:Notify({
-                    Title = "domius",
+                    Title = "Min Gaming",
                     Content = "Đảo Bí Ẩn Tìm Thấy",
                     Duration = 10
                 });
@@ -4059,7 +4059,7 @@ if Sea3 then
             _G.AutoFindFrozen = false;
             if not v513 then
                 v14:Notify({
-                    Title = "domius",
+                    Title = "Min Gaming",
                     Content = "Đảo Leviathan Tìm Thấy",
                     Duration = 10
                 });
@@ -9321,7 +9321,7 @@ spawn(function()
     end
 end);
 v14:Notify({
-    Title = "domius",
+    Title = "Min Gaming",
     Content = "Tải Xong",
     Duration = 10
 });
