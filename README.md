@@ -171,3 +171,69 @@ spawn(function()
         end
     end
 end)
+
+-- Seu script principal inteiro aqui...
+
+-- AutoStore (coloca no final)
+spawn(function()
+    while task.wait(0.2) do
+        if getgenv().AutoStoreFruit then
+            pcall(function()
+                local player = game:GetService("Players").LocalPlayer
+                local character = player.Character
+                local backpack = player.Backpack
+                local fruits = {
+                    {"Rocket Fruit", "Rocket-Rocket"},
+                    {"Spin Fruit", "Spin-Spin"},
+                    {"Blade Fruit", "Blade-Blade"},
+                    {"Spring Fruit", "Spring-Spring"},
+                    {"Bomb Fruit", "Bomb-Bomb"},
+                    {"Smoke Fruit", "Smoke-Smoke"},
+                    {"Spike Fruit", "Spike-Spike"},
+                    {"Flame Fruit", "Flame-Flame"},
+                    {"Falcon Fruit", "Falcon-Falcon"},
+                    {"Ice Fruit", "Ice-Ice"},
+                    {"Sand Fruit", "Sand-Sand"},
+                    {"Dark Fruit", "Dark-Dark"},
+                    {"Diamond Fruit", "Diamond-Diamond"},
+                    {"Light Fruit", "Light-Light"},
+                    {"Rubber Fruit", "Rubber-Rubber"},
+                    {"Barrier Fruit", "Barrier-Barrier"},
+                    {"Ghost Fruit", "Ghost-Ghost"},
+                    {"Magma Fruit", "Magma-Magma"},
+                    {"Quake Fruit", "Quake-Quake"},
+                    {"Buddha Fruit", "Buddha-Buddha"},
+                    {"Love Fruit", "Love-Love"},
+                    {"Spider Fruit", "Spider-Spider"},
+                    {"Sound Fruit", "Sound-Sound"},
+                    {"Phoenix Fruit", "Phoenix-Phoenix"},
+                    {"Portal Fruit", "Portal-Portal"},
+                    {"Rumble Fruit", "Rumble-Rumble"},
+                    {"Pain Fruit", "Pain-Pain"},
+                    {"Blizzard Fruit", "Blizzard-Blizzard"},
+                    {"Gravity Fruit", "Gravity-Gravity"},
+                    {"Mammoth Fruit", "Mammoth-Mammoth"},
+                    {"T-Rex Fruit", "T-Rex-T-Rex"},
+                    {"Dough Fruit", "Dough-Dough"},
+                    {"Shadow Fruit", "Shadow-Shadow"},
+                    {"Venom Fruit", "Venom-Venom"},
+                    {"Gas Fruit", "Gas-Gas"},
+                    {"Control Fruit", "Control-Control"},
+                    {"Spirit Fruit", "Spirit-Spirit"},
+                    {"Leopard Fruit", "Leopard-Leopard"},
+                    {"Yeti Fruit", "Yeti-Yeti"},
+                    {"Kitsune Fruit", "Kitsune-Kitsune"},
+                    {"Dragon Fruit", "Dragon-Dragon"},
+                }
+                for _, fruit in ipairs(fruits) do
+                    local fruitName, serverName = fruit[1], fruit[2]
+                    if character:FindFirstChild(fruitName) or backpack:FindFirstChild(fruitName) then
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit", serverName, backpack:FindFirstChild(fruitName))
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+getgenv().AutoStoreFruit = true
