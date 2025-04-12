@@ -164,7 +164,7 @@ spawn(function()
             flyTo(fruit.Position)
         else
             for i = 10, 1, -1 do
-                Status.Text = "Status: Hop server in " .. i .. "s"
+                Status.Text = "Status: New Server In " .. i .. "s"
                 task.wait(1)
             end
             serverHop()
