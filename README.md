@@ -101,6 +101,10 @@ local function flyTo(position, speed)
             if (hrp.Position - position).Magnitude < 5 then
                 hrp.Velocity = Vector3.zero
                 Status.Text = "Status: Fruta coletada!"
+                
+                -- Após coletar a fruta, chamamos a função para armazená-la
+                autoStoreFruit()
+                
                 currentConnection:Disconnect()
             end
         end
@@ -120,6 +124,13 @@ local function findFruit()
         end
     end
     return nil
+end
+
+-- Função para armazenar a fruta
+local function autoStoreFruit()
+    pcall(function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit", "yes")
+    end)
 end
 
 -- Sistema de troca de servidor após 10 segundos sem encontrar fruta
